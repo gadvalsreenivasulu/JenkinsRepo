@@ -1,0 +1,31 @@
+pipeline {
+
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                echo 'Hello World'
+                dir('C:\\\\Users\\\\Administrator\\\\Desktop\\\\jenktest_dir1\\\\score-ui') {
+                    // some block
+                    bat 'touch file123.1'
+                    dir('C:\\\\Users\\\\Administrator\\\\Desktop\\\\jenktest_dir1\\\\score-ui\\\\file123.1') {
+                        bat 'git clone https://github.com/OnstakInc/score-ui.git'
+                        //bat 'git pull'
+                        echo "-----------------npm installing ----------------"
+                        bat 'npm install'
+                        echo "-----------------npm installed ----------------"
+                        //bat 'npm run dev'
+                        bat 'npm run start'
+                    }
+                } 
+               
+		echo "success"
+            }
+        }
+        stage('build1') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
