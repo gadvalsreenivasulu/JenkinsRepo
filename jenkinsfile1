@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                echo 'Hello World'
+               
+                   
+                    bat 'touch file1'
+                   
+             
+               
+		            echo "success"
+            }
+           }
+        stage('build1') {
+            steps {
+                echo 'Hello World'
+                        bat 'cd file1'
+                        bat 'git clone https://github.com/OnstakInc/score-ui.git'
+                        //bat 'git pull'
+                        echo "-----------------npm installing ----------------"
+                        bat 'npm install'
+                        echo "-----------------npm installed ----------------"
+                        //bat 'npm run dev'
+                        
+                        bat 'npm run start'
+                        
+                        //start https://localhost:4200
+                        
+                        
+                  
+            }
+        }
+    }
+}
