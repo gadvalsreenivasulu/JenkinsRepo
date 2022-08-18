@@ -6,7 +6,7 @@ pipeline {
                 echo 'Hello World'
                
                    
-                    bat 'touch file1'
+                    bat 'mkdir file1'
                    
              
                
