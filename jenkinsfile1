@@ -6,8 +6,8 @@ pipeline {
                 echo 'Hello World'
                
                    
-                    bat 'mkdir file1'
-		     bat 'cd file1'
+                    bat 'mkdir file12'
+		     bat 'cd file12'
                         bat 'git clone https://github.com/OnstakInc/score-ui.git'
                         //bat 'git pull'
 			bat 'cd score-ui'
