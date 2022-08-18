@@ -4,25 +4,19 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Hello World'
-               
-                   
-                    bat 'mkdir file12'
-		     bat 'cd file12'
-                        bat 'git clone https://github.com/OnstakInc/score-ui.git'
+		dir('C:\\\\score_folder\\\\New folder') {
+		 bat 'mkdir one'
+		 bat 'cd one'
+		 bat 'git clone https://github.com/OnstakInc/score-ui.git'
                         //bat 'git pull'
-			bat 'cd score-ui'
+		 bat 'cd score-ui'
                         echo "-----------------npm installing ----------------"
-                        bat 'npm install'
+                 bat 'npm install'
                         echo "-----------------npm installed ----------------"
                         //bat 'npm run dev'
-                        
-                        bat 'npm run start'
-                        
-                        //start https://localhost:4200
-                   
-             
-               
-		            echo "success"
+                 bat 'npm run start'
+		}
+        
             }
            }
         stage('build1') {
