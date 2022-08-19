@@ -16,6 +16,7 @@ pipeline {
 						echo "-----------------npm installed ----------------"
 						//bat 'npm run dev'
 					 bat 'npm run start'
+					 //bat 'start http://localhost:4200'
 					 }
 			 }
 		}
