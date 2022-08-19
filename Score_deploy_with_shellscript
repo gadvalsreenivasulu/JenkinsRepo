@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                dir('C:\\\\score_folder\\\\New folder') {
+                    //sh 'cd C:\\score_folder\\New folder'
+                    sh 'mkdir shell_script'
+                    //sh 'cd shell_script'
+                    dir('C:\\\\score_folder\\\\New folder\\\\shell_script') {
+                        sh 'git clone git@github.com:OnstakInc/score-ui.git'
+                        //sh 'cd score-ui'
+                        dir('C:\\\\score_folder\\\\New folder\\\\shell_script\\\\score-ui') {
+                            sh 'npm install'
+                            sh 'npm run start'
+                            //sh 'start URL'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
