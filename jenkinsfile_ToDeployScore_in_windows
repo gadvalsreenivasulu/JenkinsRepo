@@ -1,0 +1,8 @@
+cd C:\Users\sreen\directory1\New folder
+mkdir folder2
+cd C:\Users\sreen\directory1\New folder\folder2
+git clone https://github.com/OnstakInc/score-ui
+cd score-ui
+echo "moved into score directory"
+npm install
+npm run start
