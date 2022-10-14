@@ -5,12 +5,12 @@ pipeline {
             steps {
                 echo 'Hello World'
 		dir('C:\\\\score_folder\\\\New folder') {
-		 bat 'mkdir onetwo'
-			 dir('C:\\\\score_folder\\\\New folder\\\\onetwo') {
+		 bat 'mkdir sreenu_score'
+			 dir('C:\\\\score_folder\\\\New folder\\\\sreenu_score') {
 		
 				 bat 'git clone https://github.com/OnstakInc/score-ui.git'
 					//bat 'git pull'
-					dir('C:\\\\score_folder\\\\New folder\\\\onetwo\\\\score-ui') {
+					dir('C:\\\\score_folder\\\\New folder\\\\sreenu_score\\\\score-ui') {
 						echo "-----------------npm installing ----------------"
 					 bat 'npm install'
 						echo "-----------------npm installed ----------------"
