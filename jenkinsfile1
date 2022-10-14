@@ -10,7 +10,7 @@ pipeline {
 		
 				 bat 'git clone https://github.com/OnstakInc/score-ui.git'
 					//bat 'git pull'
-					dir('C:\\\\score_folder\\\\New folder\\\\one\\\\score-ui') {
+					dir('C:\\\\score_folder\\\\New folder\\\\onetwo\\\\score-ui') {
 						echo "-----------------npm installing ----------------"
 					 bat 'npm install'
 						echo "-----------------npm installed ----------------"
