@@ -1,0 +1,4 @@
+cd score-ui/
+
+Git pull
+Sh deploy.sh qa
